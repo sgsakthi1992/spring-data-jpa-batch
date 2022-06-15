@@ -19,7 +19,8 @@ public class EmployeeConverter {
         var employee = new Employee();
         employee.setFirstName(employeeCsv.getFirstName());
         employee.setLastName(employeeCsv.getLastName());
-        employee.setDateOfBirth(employeeCsv.getDateOfBirth());
+        employee.setDateOfJoin(employeeCsv.getDateOfJoin());
+        employee.setDateOfExit(employeeCsv.getDateOfExit());
         return employee;
     }
 }

@@ -7,6 +7,7 @@ import com.example.springdatajpabatch.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -27,5 +28,9 @@ public class EmployeeService {
 
     public List<Employee> findAll() {
         return employeeRepository.findAll();
+    }
+
+    public List<Employee> findBetween(LocalDate dateOfJoin, LocalDate dateOfExit) {
+        return employeeRepository.findByDateOfJoinBetweenAndDateOfExitBetween(dateOfJoin, dateOfExit, dateOfJoin, dateOfExit);
     }
 }

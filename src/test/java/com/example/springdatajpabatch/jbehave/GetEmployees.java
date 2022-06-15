@@ -39,7 +39,7 @@ public class GetEmployees {
         assertTrue(employees.size() > 1);
         assertEquals("Malli", employees.get(0).firstName);
         assertEquals("Bandi", employees.get(0).lastName);
-        assertEquals("10-11-1989", employees.get(0).dateOfBirth);
+        assertEquals("10-11-1989", employees.get(0).dateOfJoin);
     }
 
     private static HttpResponse getFindAll(String api) throws IOException {

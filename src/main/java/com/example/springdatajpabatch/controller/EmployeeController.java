@@ -2,12 +2,15 @@ package com.example.springdatajpabatch.controller;
 
 import com.example.springdatajpabatch.domain.Employee;
 import com.example.springdatajpabatch.service.EmployeeService;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -28,6 +31,12 @@ public class EmployeeController {
     @PostMapping
     public void saveAll() throws FileNotFoundException {
         employeeService.saveAll();
+    }
+
+    @GetMapping("/between")
+    public List<Employee> findBetween(@RequestParam @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dateOfJoin,
+                                      @RequestParam @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dateOfExit) {
+        return employeeService.findBetween(dateOfJoin, dateOfExit);
     }
 
 }

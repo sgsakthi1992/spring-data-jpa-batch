@@ -1,9 +1,9 @@
-first_name,last_name,date_of_birth
-Malli,Bandi,10-11-1989
-Sakthi,Subramaniam,04-06-1992
-Sakthi,Malli,04-06-1992
-Mallikarjuna,Bandi,10-11-1989
-Gokula Sakthi,Subramaniam,04-06-1992
-Gokula Sakthi,Bandi,04-06-1992
-Gokula Sakthi,Mallikarjun,04-06-1992
-Gokula Sakthi,Malli,04-06-1992
+first_name,last_name,date_of_join,date_of_exit
+Malli,Bandi,15-03-2012,30-09-2019
+Sakthi,Subramaniam,09-01-2013,08-03-2017
+Sakthi,Malli,15-03-2017,31-10-2019
+Mallikarjuna,Bandi,01-10-2019,14-06-2021
+Sakthi,Subramaniam,13-11-2019,14-06-2023
+Gokula Sakthi,Bandi,09-01-2013,08-03-2017
+Gokula Sakthi,Mallikarjun,09-01-2013,08-03-2017
+Mallikarjuna,Bandi,14-06-2021,14-06-2023
