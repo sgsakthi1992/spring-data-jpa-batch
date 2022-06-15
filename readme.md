@@ -15,4 +15,5 @@ Hibernate disables insert batching at the JDBC level transparently if you use an
 
 #### Reference
 https://www.baeldung.com/spring-data-jpa-batch-inserts
+
 https://stackoverflow.com/questions/50772230/how-to-do-bulk-multi-row-inserts-with-jparepository
