@@ -30,7 +30,7 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
-    public List<Employee> findBetween(LocalDate dateOfJoin, LocalDate dateOfExit) {
-        return employeeRepository.findByDateOfJoinBetweenAndDateOfExitBetween(dateOfJoin, dateOfExit, dateOfJoin, dateOfExit);
+    public List<Employee> findBetween(LocalDate date) {
+        return employeeRepository.findAllBetweenJoinAndExitDate(date);
     }
 }

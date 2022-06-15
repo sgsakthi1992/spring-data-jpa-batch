@@ -34,9 +34,8 @@ public class EmployeeController {
     }
 
     @GetMapping("/between")
-    public List<Employee> findBetween(@RequestParam @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dateOfJoin,
-                                      @RequestParam @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dateOfExit) {
-        return employeeService.findBetween(dateOfJoin, dateOfExit);
+    public List<Employee> findBetween(@RequestParam @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate date) {
+        return employeeService.findBetween(date);
     }
 
 }
