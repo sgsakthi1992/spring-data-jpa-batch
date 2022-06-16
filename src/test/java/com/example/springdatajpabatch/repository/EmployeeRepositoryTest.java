@@ -9,7 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
@@ -22,7 +22,7 @@ class EmployeeRepositoryTest {
     @Test
     void testFindAllBetweenJoinAndExitDate() {
         var response = employeeRepository.findAllBetweenJoinAndExitDate(LocalDate.of(2022, 6, 16));
-        assertTrue(response.size() > 1);
+        assertEquals(2, response.size());
     }
 
 }

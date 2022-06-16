@@ -42,6 +42,10 @@
             <version>5.6</version>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -49,8 +53,18 @@
         <dependency>
             <groupId>org.jbehave</groupId>
             <artifactId>jbehave-core</artifactId>
-            <version>4.1</version>
+            <version>4.8.3</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jbehave</groupId>
+            <artifactId>jbehave-spring</artifactId>
+            <version>4.8.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jbehave</groupId>
+            <artifactId>jbehave-gherkin</artifactId>
+            <version>4.8.3</version>
         </dependency>
         <dependency>
             <groupId>org.liquibase</groupId>
@@ -64,7 +78,6 @@
             <version>4.5.13</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
