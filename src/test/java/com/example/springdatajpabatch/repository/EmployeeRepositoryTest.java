@@ -20,7 +20,6 @@ class EmployeeRepositoryTest {
     @Test
     void testFindAllBetweenJoinAndExitDate() {
         var response = employeeRepository.findAllBetweenJoinAndExitDate(LocalDate.of(2022, 6, 16));
-
         assertTrue(response.size() > 1);
     }
 
