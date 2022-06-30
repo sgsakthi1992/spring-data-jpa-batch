@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
-    <changeSet id="1655389798538-1" author="Sakthi_Subramaniam">
+    <changeSet id="1656585353291-1" author="Sakthi_Subramaniam">
         <createTable tableName="employee">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_employee"/>
@@ -15,7 +15,9 @@
             <column name="last_name" type="VARCHAR(255)"/>
             <column name="date_of_join" type="DATE"/>
             <column name="date_of_exit" type="DATE"/>
+            <column name="manager_id" type="BIGINT"/>
         </createTable>
+        <addForeignKeyConstraint baseColumnNames="manager_id" baseTableName="employee" constraintName="FK_EMPLOYEE_ON_MANAGER" referencedColumnNames="id" referencedTableName="employee"/>
         <createSequence sequenceName="hibernate_sequence" startValue="1" incrementBy="1"/>
         <loadData tableName="employee" file="test-date.csv"/>
     </changeSet>

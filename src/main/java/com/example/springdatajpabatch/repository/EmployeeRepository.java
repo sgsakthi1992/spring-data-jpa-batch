@@ -12,4 +12,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query(value = "from Employee e where :date BETWEEN e.dateOfJoin AND e.dateOfExit")
     List<Employee> findAllBetweenJoinAndExitDate(LocalDate date);
+
+    @Query(value = "select distinct e from Employee e JOIN FETCH e.subordinates s where :date BETWEEN s.dateOfJoin AND s.dateOfExit")
+    List<Employee> fetchEmployeeJoinFetch(LocalDate date);
 }

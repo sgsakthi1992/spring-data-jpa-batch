@@ -25,4 +25,10 @@ class EmployeeRepositoryTest {
         assertEquals(2, response.size());
     }
 
+    @Test
+    void testJoinFetch() {
+        var response = employeeRepository.fetchEmployeeJoinFetch(LocalDate.of(2013, 3, 15));
+        assertEquals(1, response.size());
+    }
+
 }
